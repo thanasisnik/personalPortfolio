@@ -60,5 +60,5 @@ document.getElementById("myFooter").addEventListener("click", function() {
     setTimeout(() => {
       this.classList.remove("active");
       document.getElementById("overlay").style.display="none";
-    }, 3000);
+    }, 1000);
   });

@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #aa524c, #ecd2d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #aa524c, #ffc8b2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100vh;
     font-family: 'Poppins',sans-serif;
     width: 100%;
@@ -11,20 +11,20 @@ body{
     overflow: auto;
 }
 
-header,footer{
-    padding: 10px;
-}
+
 
 .navbar {
-   
+    margin: 0;
+    padding: 20px 20px;
     background: transparent;
+    backdrop-filter: blur(80px);
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
 
 .navbar a{
-    font-size: 30px;
+    font-size: 1.3vw;
     text-decoration: none;
 }
 
@@ -40,7 +40,7 @@ header,footer{
 }
 
 .navbar ul li a{
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .mobile-menu{
@@ -110,7 +110,7 @@ main{
 }
 
 .white-text, .red-text {
-    font-size: 10vw; /* Scales with viewport width */
+    font-size: 5vw; /* Scales with viewport width */
     font-family: "Merriweather", serif;
     font-weight: 900;
 }
@@ -127,15 +127,12 @@ main{
 
 .subH{
     margin: 0;
-    font-size: 4.5vw; /* Scales with viewport width */
+    font-size: 2vw; /* Scales with viewport width */
     font-family: "Poppins", sans-serif;
     font-weight: 500;
 }
 
-.subh1 {
-    font-size: 3.3vw; /* Scales with viewport width */
-  
-}
+
 
 .btnC{
     display: flex;
@@ -148,7 +145,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: 600;
     letter-spacing: 1px;
     padding: 13px 20px 13px;
@@ -223,7 +220,21 @@ main{
   .top    { transform: rotateX(90deg) translateZ(75px); }
   .bottom { transform: rotateX(-90deg) translateZ(75px); }
 
+.learns{
+    font-size: 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    width: 310px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 5px;
+}
 
+.learns img{
+    width: 55px;
+    height: auto;
+}
   .overlay {
     display: none;
     position: fixed;
@@ -250,7 +261,7 @@ main{
 }
 .footerCont span{
     font-family: 'Poppins',sans-serif;
-    font-size: 12vw;
+    font-size: 10vw;
     font-weight: 900;
     cursor: pointer;
     z-index: 1000; /* Διασφαλίζει ότι το footer παραμένει πάνω από το overlay */
@@ -293,34 +304,20 @@ main{
 
 .aboutHead{
     font-family: "Poppins",sans-serif;
-    font-size: 5vw;
+    font-size: 3vw;
     font-weight: 600;
 }
 
 
-.about-title img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: auto;
-  
-}
 .about-subT{
-    font-size: 2rem;
+    font-size: 1.7rem;
     padding: 10px;
 }
-.port-pc{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.port-pc img{
+.portMain{
     display: flex;
     justify-content: center;
-    align-items: center;
+    height: 65vh;
 }
-
 @media (max-width:768px){
     body{
         display: flex;
