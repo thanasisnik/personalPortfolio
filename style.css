@@ -285,7 +285,9 @@ main{
   }
 
 .footerCont .socialC{
-    padding-top: 100px;
+    font-family: "Poppins",sans-serif;
+        font-weight: 500;
+    padding-top: 30px;
     font-size: 1.5vw;
 }
 
@@ -323,6 +325,7 @@ main{
     body{
         display: flex;
         flex-direction: column;
+        overflow: hidden;
         
     }
     .navbar{
@@ -344,12 +347,16 @@ main{
         flex-direction: column;
         text-align: center;
     }
+    .footerCont .socialC{
+        font-family: "Poppins",sans-serif;
+        font-weight: 500;
+        font-size: 2.5vw;
+    }
 
     .port-pc img {
         width: 100%;
         height: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
+        margin: 0 auto;
     }
 }
