@@ -1,14 +1,13 @@
 body{
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #aa524c, #ffc8b2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    height: 100vh;
+    background: linear-gradient(120deg, #152575, #094e92); /* Gradient background */
+    height: 100%;
     font-family: 'Poppins',sans-serif;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: auto;
+    color: #E0E0E0; 
+    background-repeat: no-repeat;
+ 
 }
 
 
@@ -16,8 +15,10 @@ body{
 .navbar {
     margin: 0;
     padding: 20px 20px;
-    background: transparent;
-    backdrop-filter: blur(80px);
+    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -26,6 +27,7 @@ body{
 .navbar a{
     font-size: 1.3vw;
     text-decoration: none;
+    color: #00FFFF;;
 }
 
 .navbar ul{
@@ -39,10 +41,6 @@ body{
     color: black;
 }
 
-.navbar ul li a{
-    color: rgb(255, 255, 255);
-}
-
 .mobile-menu{
     display: none;
     
@@ -50,7 +48,8 @@ body{
 
 .hamburger {
     cursor: pointer;
-    display: none;
+    display: flex;
+    z-index: 1100;
     flex-direction: column;
     align-items: flex-end;
     gap: 0.3rem;
@@ -63,7 +62,7 @@ body{
     width: 1.4rem;
     height: 0.2rem;
     transition: all 0.3s ease;
-    background-color: #14090c;
+    background-color:  #00FFFF;;
     
 }
 .hamburger.active .line:nth-child(1){
@@ -81,32 +80,48 @@ body{
 }
 
 .mobile-nav{
-    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+  
+    backdrop-filter: blur(20px);
+    display: flex;
     justify-content: center;
     align-items: center;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+    z-index: 1001;
 }
 .mobile-nav.active{
     display: flex;
     transform: translateX(0);
 }
 
-.mobile-nav ul {
-    list-style-type:none;
+.mobile-nav ul{
+    list-style:none;
     text-align: center;
-   
-    }
+    
+}
+.mobile-nav ul li{
+    margin: 70px;
+    
+    
+}
+
 
 .mobile-nav ul li a{
-    color: black;
+    text-decoration: none;
+    color:  #00FFFF;;
+    font-size: 4vw;
+    font-weight: bold;
 }
-main{
+.hero {
     display: flex;
-    flex: 1;
-    padding: 10px 20px;
+}
 
-   
+.mainCont{
+    text-align: center;
+    padding: 15px 15px;
 }
 
 .white-text, .red-text {
@@ -116,12 +131,12 @@ main{
 }
 
 .white-text{
-    color: white;
+    color: #d7d4ff;
 
 }
 
 .red-text{
-    color: red;
+    color: #A9C9FF;
   
 }
 
@@ -130,6 +145,7 @@ main{
     font-size: 2vw; /* Scales with viewport width */
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+    color: #E0E0E0;
 }
 
 
@@ -150,7 +166,7 @@ main{
     letter-spacing: 1px;
     padding: 13px 20px 13px;
     outline: 0;
-    border: 1px solid black;
+    border: 2px solid black;
     cursor: pointer;
     position: relative;
     background-color: rgba(0, 0, 0, 0);
@@ -162,7 +178,7 @@ main{
 
 .btn:after{
     content: "";
-  background-color: #ff5752;
+  background-color: #FFF9C4;
   width: 100%;
   z-index: -1;
   position: absolute;
@@ -202,8 +218,8 @@ main{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(221, 13, 13, 0.1);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1), inset 0 0 30px rgba(255, 255, 255, 0.1), inset 0 0 50px rgba(255, 255, 255, 0.1);
+    background: rgba(0, 204, 255, 0.1);
+    box-shadow: 0 0 15px rgba(20, 205, 230, 0.1), inset 0 0 30px rgba(255, 255, 255, 0.1), inset 0 0 50px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
 }
 
@@ -220,7 +236,11 @@ main{
   .top    { transform: rotateX(90deg) translateZ(75px); }
   .bottom { transform: rotateX(-90deg) translateZ(75px); }
 
+
+
 .learns{
+    text-decoration: underline;
+    padding: 20px 150px;
     font-size: 2vw;
     display: flex;
     flex-wrap: wrap;
@@ -228,13 +248,19 @@ main{
     align-items: center;
     text-align: center;
     justify-content: center;
-    gap: 5px;
+    gap: 20px;
 }
 
 .learns img{
-    width: 55px;
+    width: 60px;
     height: auto;
+    transition: transform 0.3s ease;
 }
+
+.learns img:hover{
+    transform: scale(1.5);
+}
+
   .overlay {
     display: none;
     position: fixed;
@@ -322,7 +348,15 @@ main{
     body{
         display: flex;
         flex-direction: column;
-        overflow: hidden;
+        
+        height: 100%;
+        -webkit-overflow-scrolling: touch; /* Απαλότερη κύλιση στο κινητό */
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+        overflow-x: hidden; /* Αποτρέπει την οριζόντια κύλιση */
+
         
     }
     .navbar{
