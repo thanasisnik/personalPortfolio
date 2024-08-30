@@ -81,18 +81,21 @@ body{
 
 .mobile-nav{
     position: fixed;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(255, 255, 255, 0.1); /* Glassmorphism effect */
+    background: rgba(0, 0, 0, 0.4); /* Glassmorphism effect */
     border: 1px solid rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 1500;
+    z-index: 9999;
 }
 .mobile-nav.active{
     display: flex;
@@ -114,8 +117,9 @@ body{
 .mobile-nav ul li a{
     text-decoration: none;
     color:  #00FFFF;;
-    font-size: 4vw;
+    font-size: 6vw;
     font-weight: bold;
+    margin: 10px 0;
 }
 .hero {
     display: flex;
@@ -357,7 +361,7 @@ body{
 @media (max-width:768px){
     *{
         box-sizing: border-box;
-        margin: 0;
+        
     }
     body{
         display: flex;
