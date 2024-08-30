@@ -49,12 +49,15 @@ body{
 .hamburger {
     cursor: pointer;
     display: flex;
-    z-index: 1100;
+    z-index: 10000;
     flex-direction: column;
     align-items: flex-end;
     gap: 0.3rem;
     margin: 1rem;
-    transform: translateY(-50%);
+    transform: translateY(0);
+    position: fixed;
+    right: 10px;
+    top: 10px;
    
 }
 
@@ -85,7 +88,7 @@ body{
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Glassmorphism effect */
+    background: rgba(0, 0, 0, 0.3); /* Glassmorphism effect */
     border: 1px solid rgba(255, 255, 255, 0.2); 
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px); 
@@ -96,6 +99,7 @@ body{
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 9999;
+   
 }
 .mobile-nav.active{
     display: flex;
@@ -108,7 +112,7 @@ body{
     
 }
 .mobile-nav ul li{
-    margin: 70px;
+    margin: 70px 0;
     
     
 }
@@ -389,10 +393,11 @@ body{
             align-items: flex-start;
             padding: 0;
             margin: 0;
+            z-index: 999;
         }
         .learns{
             font-size: 5vw;
-            z-index: 1100;
+            z-index: 1000;
         }
         .aboutC{
             display: flex;
