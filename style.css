@@ -398,6 +398,7 @@ body{
         .learns{
             font-size: 5vw;
             z-index: 1000;
+            width: auto;
         }
         .aboutC{
             display: flex;
